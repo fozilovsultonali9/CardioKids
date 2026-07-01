@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioKids - Bolalarda Yurak Nuqsonlarini Aniqlash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- DISCLAIMER BANNER -->
+    <div class="disclaimer-banner">
+        ⚠️ <strong>Muhim:</strong> Bu sayt tibbiy tashxis qo'ymaydi. Alomat sezsangiz, albatta pediatr yoki kardiologga murojaat qiling.
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="heart-icon">❤️</span>
+                <h1>CardioKids</h1>
+            </div>
+            <nav class="nav">
+                <a href="#alomatlar">Alomatlar</a>
+                <a href="#nuqsonlar">Nuqsonlar</a>
+                <a href="#shoshilinch">Shoshilinch</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bolalarda Tug'ma Yurak Nuqsonlarini Erta Aniqlang</h2>
+                <p>CardioKids - yangi tug'ilgan chaqaloqlardan 18 yoshgacha bo'lgan bolalarda tug'ma va orttirilgan yurak nuqsonlarini erta aniqlashga yordam beruvchi ta'lim platformasi</p>
+                <button class="btn btn-primary" onclick="scrollToSection('alomatlar')">Alomatlarni Tekshirish</button>
+            </div>
+            <div class="hero-animation">
+                <svg viewBox="0 0 300 100" class="heartbeat">
+                    <path d="M 10 50 L 40 50 L 50 30 L 60 50 L 90 50 L 100 40 L 110 50 L 140 50" stroke="#0099cc" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALOMATLAR BO'LIMI -->
+    <section id="alomatlar" class="symptoms-section">
+        <div class="container">
+            <h2>Yosh Guruhlari Bo'yicha Alomatlar</h2>
+            
+            <div class="age-tabs">
+                <button class="tab-btn active" onclick="showAgeGroup('newborn')">Yangi tug'ilgan (0–28 kun)</button>
+                <button class="tab-btn" onclick="showAgeGroup('infant')">Chaqaloq (1–12 oy)</button>
+                <button class="tab-btn" onclick="showAgeGroup('toddler')">Maktabgacha (1–6 yosh)</button>
+                <button class="tab-btn" onclick="showAgeGroup('school')">Maktab va o'smir (7–18 yosh)</button>
+            </div>
+
+            <!-- NEWBORN -->
+            <div id="newborn" class="age-content active">
+                <h3>🍼 Yangi tug'ilgan (0–28 kun)</h3>
+                <div class="symptoms-grid">
+                    <div class="symptom-card">
+                        <span class="symptom-icon">🔵</span>
+                        <h4>Sianoz (Ko'ksillik)</h4>
+                        <p>Lablar, barmoqlar yoki yuzning ko'k rangga o'tishi, ayniqsa emishda yoki plaч ko'targanida</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">💨</span>
+                        <h4>Tez-tez Nafas Olish</h4>
+                        <p>Daqiqada 60 dan ortiq nafas (dam olish davomida normal 30-40)</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">😴</span>
+                        <h4>Emishda Charchash</h4>
+                        <p>Chaqaloq emishdan tez-tez to'xtab, hushdan ketadiganiday tuyuladi</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">💦</span>
+                        <h4>Ortiqcha Terish</h4>
+                        <p>Chaqaloq havo sovuq bo'lsa ham juda ko'p teradi, xususan bosh va yuzida</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">📉</span>
+                        <h4>Vazn Qo'shmaslik</h4>
+                        <p>Birinchi oy ichida vazni kutilganidek ko'plamada ortmaydi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INFANT -->
+            <div id="infant" class="age-content">
+                <h3>👶 Chaqaloq (1–12 oy)</h3>
+                <div class="symptoms-grid">
+                    <div class="symptom-card">
+                        <span class="symptom-icon">📉</span>
+                        <h4>O'sishda Orqada Qolish</h4>
+                        <p>Bod'o'g'i yosh hamkasblarining vazni bilan solishtirganda sezilarli kerak</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">⚡</span>
+                        <h4>Takikardiya (Yurak Urishi Tez)</h4>
+                        <p>Chaqaloq tinch bo'lsa ham yurak urishi daqiqada 160 dan ortiq (normal 100-160)</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">🫁</span>
+                        <h4>Ko'krak Shishishi</h4>
+                        <p>Qo'llar va oyoqlarning shishishi, xususan kechasi ko'proq</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">😤</span>
+                        <h4>Nafas Qisilishi</h4>
+                        <p>Hatto tinch holda ham nafas olishda qiyinlik, xohlagan harakatlarda ko'proq</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODDLER -->
+            <div id="toddler" class="age-content">
+                <h3>🧒 Maktabgacha (1–6 yosh)</h3>
+                <div class="symptoms-grid">
+                    <div class="symptom-card">
+                        <span class="symptom-icon">😫</span>
+                        <h4>Jismoniy Faollikda Tez Charchash</h4>
+                        <p>Boshqa bolalar bilan o'ynashga jamon, tez charchasadi</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">💫</span>
+                        <h4>Sinkopa (Hushidan Ketish)</h4>
+                        <p>O'ynab-o'ynaganda yoki harakatlanganda hushidan ketadi</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">🫀</span>
+                        <h4>Yurak Urishi Sezilishi</h4>
+                        <p>Bolaning o'zi yoki ota-onasi yurakni tez urganini sezadi</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">🤒</span>
+                        <h4>Qizonchoq yo'q Holda Bekar</h4>
+                        <p>Hech qanday sabab bo'lmasa ham bolaning holati jonijon</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCHOOL AGE -->
+            <div id="school" class="age-content">
+                <h3>🎒 Maktab Yoshi va O'smir (7–18 yosh)</h3>
+                <div class="symptoms-grid">
+                    <div class="symptom-card">
+                        <span class="symptom-icon">⚽</span>
+                        <h4>Jismoniy Mashqlarda Nafas Qisilishi</h4>
+                        <p>Sport mashqlari davomida yoki o'tidan so'ng nafas olishda qiyinlik</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">🫀</span>
+                        <h4>Ko'krak Og'rig'i</h4>
+                        <p>Mashq qilayotganda yoki stress paytida ko'krak og'riydi</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">💓</span>
+                        <h4>Palpitatsiya (Yurak Urishi Sezilishi)</h4>
+                        <p>Yurakni tez yoki bir-biriga tutib urayotganiday tuyuladi</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">😖</span>
+                        <h4>Bahoratsiyaviy Xumollar (Syncope)</h4>
+                        <p>To'satdan hushidan ketadi, xususan to'ydayotganda yoki shamol ko'porganda</p>
+                    </div>
+                    <div class="symptom-card">
+                        <span class="symptom-icon">😮‍💨</span>
+                        <h4>Boshning Aylanishi</h4>
+                        <p>Tez turganida yoki sport qilyotganda bosh aylanadi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TUGMA YURAK NUQSONLARI -->
+    <section id="nuqsonlar" class="defects-section">
+        <div class="container">
+            <h2>Eng Keng Tarqalgan Tug'ma Yurak Nuqsonlari</h2>
+            <p class="section-subtitle">Quyida eng ko'p uchraydigan 8 ta tug'ma yurak nuqsoni haqida qisqa ma'lumot</p>
+
+            <div class="defects-grid">
+                <!-- 1. PFO -->
+                <div class="defect-card">
+                    <div class="defect-icon">1️⃣</div>
+                    <h3>Ovalis Delik (PFO)</h3>
+                    <p><strong>Nima:</strong> O'ng va chap kamera orasidagi delik o'z-o'zidan yopilmaydi</p>
+                    <p><strong>Belgilar:</strong> Ko'pincha belgilar yo'q, faqat ushl arifani paytida topiladi</p>
+                    <p><strong>Prognozi:</strong> Ko'pincha xolatisiz, lekin kuzatuv zarur</p>
+                </div>
+
+                <!-- 2. ASD -->
+                <div class="defect-card">
+                    <div class="defect-icon">2️⃣</div>
+                    <h3>Atrial Septum Nuqsoni (ASD)</h3>
+                    <p><strong>Nima:</strong> Yurakdagi o'ng va chap kameralari orasida delik</p>
+                    <p><strong>Belgilar:</strong> Nafas qisilishi, charchash, yurak urishi tez</p>
+                    <p><strong>Prognozi:</strong> Operative muolaja kerak bo'lishi mumkin</p>
+                </div>
+
+                <!-- 3. VSD -->
+                <div class="defect-card">
+                    <div class="defect-icon">3️⃣</div>
+                    <h3>Qorincha Oralig'i Nuqsoni (VSD)</h3>
+                    <p><strong>Nima:</strong> Yurakdagi qorinchalar orasida delik</p>
+                    <p><strong>Belgilar:</strong> Sianoz, nafas qisilishi, emishda charchash</p>
+                    <p><strong>Prognozi:</strong> Kichik nuqsonlar o'z-o'zi yopilishi mumkin</p>
+                </div>
+
+                <!-- 4. PDA -->
+                <div class="defect-card">
+                    <div class="defect-icon">4️⃣</div>
+                    <h3>Patent Ductus Arteriosus (PDA)</h3>
+                    <p><strong>Nima:</strong> Tug'ilish paytidagi kichik tom tomirning yopilmasligi</p>
+                    <p><strong>Belgilar:</strong> Nafas qisilishi, charchash, o'sishda orqada qolish</p>
+                    <p><strong>Prognozi:</strong> Dorilar yoki operative muolaja</p>
+                </div>
+
+                <!-- 5. TOF -->
+                <div class="defect-card">
+                    <div class="defect-icon">5️⃣</div>
+                    <h3>Fallo Tetradasi (TOF)</h3>
+                    <p><strong>Nima:</strong> Yurakda bir nechta nuqsonlar to'plami</p>
+                    <p><strong>Belgilar:</strong> Ko'k yuqoritgi (sianoz), sinkopa, nafas qisilishi</p>
+                    <p><strong>Prognozi:</strong> Operative muolaja zarur</p>
+                </div>
+
+                <!-- 6. TGA -->
+                <div class="defect-card">
+                    <div class="defect-icon">6️⃣</div>
+                    <h3>Magistral Tomirlar Transpozitsiyasi (TGA)</h3>
+                    <p><strong>Nima:</strong> Aorta va o'ng tomirchal o'rinlarini o'zaro almashtirgan</p>
+                    <p><strong>Belgilar:</strong> Sianoz, nafas qisilishi (tug'ilishdan so'ng soatlar ichida)</p>
+                    <p><strong>Prognozi:</strong> Shoshilinch operative muolaja shart</p>
+                </div>
+
+                <!-- 7. CoA -->
+                <div class="defect-card">
+                    <div class="defect-icon">7️⃣</div>
+                    <h3>Aorta Torayishi (CoA)</h3>
+                    <p><strong>Nima:</strong> Aortaning bir qismining torayishi</p>
+                    <p><strong>Belgilar:</strong> Yuqori qon bosimi, oyoqlarida slabost, charchash</p>
+                    <p><strong>Prognozi:</strong> Operative muolaja kerak bo'lishi mumkin</p>
+                </div>
+
+                <!-- 8. HLV -->
+                <div class="defect-card">
+                    <div class="defect-icon">8️⃣</div>
+                    <h3>Chap Yurak Sindromi (HLV)</h3>
+                    <p><strong>Nima:</strong> Chap yurak qismlari rivojlanmagan</p>
+                    <p><strong>Belgilar:</strong> Shiddatli sianoz, nafas qisilishi, jismoniy slabost</p>
+                    <p><strong>Prognozi:</strong> Bir nechta operative muolajalar zarur</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- XAVF OMILLARI -->
+    <section class="risk-factors-section">
+        <div class="container">
+            <h2>Xavf Omillari</h2>
+            <div class="risk-grid">
+                <div class="risk-card">
+                    <h3>Homiladorlik Davridagi Omillar</h3>
+                    <ul>
+                        <li>🧬 Genetik tarix (oilada yurak nuqsoni bor)</li>
+                        <li>🦠 Infeksiyalar (rubella, CMV, Zika)</li>
+                        <li>💊 Muayyan dorilar qabuli</li>
+                        <li>🍷 Spirt va sigaret iste'mol</li>
+                        <li>🩺 Diabetni yaflangan ota-ona</li>
+                        <li>💉 23-xromosomal anomaliyalar (Down sindromi)</li>
+                    </ul>
+                </div>
+                <div class="risk-card">
+                    <h3>Boladan Keyingi Omillar</h3>
+                    <ul>
+                        <li>📊 Prematurnoe tug'ilish (37 hafta oldin)</li>
+                        <li>⚖️ Past vazn tug'ilish (2,5 kg dan past)</li>
+                        <li>🤰 Oilada yurak nuqsoni bor</li>
+                        <li>🧠 Boshqa sindromlar (Marfan, Williams)</li>
+                        <li>🔬 Chromosomal anomaliyalar</li>
+                        <li>👨‍👩‍👧 Qo'shni tug'ilish (kembar)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENING VA DIAGNOSTIKA -->
+    <section class="screening-section">
+        <div class="container">
+            <h2>Screening va Diagnostika Yo'li</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <h3>Klinik Tekshiruv</h3>
+                    <p>Shifokor yurakni tinglab, nabzni tekshiradi, yurak shovg'ulini baholaydi</p>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <h3>Pulsoksimetriya</h3>
+                    <p>Qon'da kislorod miqdorini aniqlanadi (sianozni topish uchun)</p>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <h3>EKG</h3>
+                    <p>Yurak elektrik faoliyatini qayd etadi</p>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <h3>Ehokardiografiya (EXO-KG)</h3>
+                    <p>Ultrasoniya bilan yurakni ko'radi va nuqsonlarni aniqlayd</p>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-number">5</div>
+                    <h3>Kardiolog Konsultatsiyasi</h3>
+                    <p>Pediatr kardiolog yakuniy tashxis qo'yadi va muolaja rejasini belgilaydi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOSHILINCH HOLATLAR -->
+    <section id="shoshilinch" class="emergency-section">
+        <div class="container">
+            <h2>⚠️ Shoshilinch Yordam Kerakli Belgilar</h2>
+            <p class="emergency-subtitle">Quyidagi belgilarni ko'rsatsangiz, darhol shoshilinch xizmatlarga qo'ng'iroq qiling!</p>
+
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <span class="emergency-icon">🔵</span>
+                    <h3>Kuchli Sianoz</h3>
+                    <p>Yuzi, lablar, oyoq-barmoqlari ko'kga o'tgan</p>
+                </div>
+                <div class="emergency-card">
+                    <span class="emergency-icon">😵</span>
+                    <h3>Hushidan Ketish</h3>
+                    <p>Bolaning hushidan ketdi yoki shuur qo'yib qo'ydi</p>
+                </div>
+                <div class="emergency-card">
+                    <span class="emergency-icon">💨</span>
+                    <h3>Nafas Olishning To'xtashi</h3>
+                    <p>Bolaning nafas olishi to'xtadi yoki darhol nafas olmoqchi bo'lsa</p>
+                </div>
+                <div class="emergency-card">
+                    <span class="emergency-icon">💔</span>
+                    <h3>Yurak Ritmi Buzulishi</h3>
+                    <p>Yurak besidir, xohlagan harakatlarda bumkasini tutib uradi</p>
+                </div>
+                <div class="emergency-card">
+                    <span class="emergency-icon">🤢</span>
+                    <h3>Og'ir Ko'krak Og'rig'i</h3>
+                    <p>Bolaning ko'kragi qattiq og'riydi, oyoq-qo'l shishadi</p>
+                </div>
+                <div class="emergency-card">
+                    <span class="emergency-icon">🔥</span>
+                    <h3>Og'ir Halol</h3>
+                    <p>Bolaning harakati sezilarli pasaydi, javob bermaydi</p>
+                </div>
+            </div>
+
+            <div class="emergency-call">
+                <h3>🚑 Shoshilinch Chaqirish Raqamlari:</h3>
+                <p><strong>Ambulansiya: 103</strong></p>
+                <p><strong>Xonanda qo'ng'iroq: +998-71-120-01-01</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELF-CHECK QUIZ -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2>Bolangiz Uchun O'z-O'zini Tekshirish</h2>
+            <p>Quyidagi belgilardan qaysilari bolangizda bor? Belgilanganlarni tanlang:</p>
+
+            <div class="quiz-container">
+                <div class="age-selector">
+                    <label>Bolaning yoshi:</label>
+                    <select id="ageSelect" onchange="updateQuizSymptoms()">
+                        <option value="">Tanlang...</option>
+                        <option value="newborn">Yangi tug'ilgan (0–28 kun)</option>
+                        <option value="infant">Chaqaloq (1–12 oy)</option>
+                        <option value="toddler">Maktabgacha (1–6 yosh)</option>
+                        <option value="school">Maktab yoshi va o'smir (7–18 yosh)</option>
+                    </select>
+                </div>
+
+                <div id="quizSymptoms" class="quiz-symptoms">
+                    <p style="color: #999;">Iltimos, bolaning yoshini tanlang</p>
+                </div>
+
+                <button class="btn btn-primary" onclick="calculateRisk()">Tekshiruv Tugadi</button>
+                <div id="quizResult" class="quiz-result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI CHATBOT -->
+    <section class="chatbot-section">
+        <div class="container">
+            <h2>🤖 AI Yordamchi</h2>
+            <p>Sizning savollaringizga javob beradigan virtual yordamchi. Esda tutingki, bu ta'lim uchun va tashxis emas!</p>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <p>Salom! Men CardioKids AI yordamchisiyam. Bolalarda yurak nuqsonlari haqida savollar bering. Esda tutingki, bu faqat ta'limiy ma'lumot beradi, tashxis qo'ymaydi.</p>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" placeholder="Savolingizni yozing..." onkeypress="handleChatKeyPress(event)">
+                    <button onclick="sendChatMessage()">Yuborish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KLINIKALAR KATALOGI -->
+    <section class="clinics-section">
+        <div class="container">
+            <h2>Pediatr Kardiologlar va Klinikalar</h2>
+            <p class="section-subtitle">Tashkentdagi asosiy kardiologiya markazlari</p>
+
+            <div class="clinics-grid">
+                <div class="clinic-card">
+                    <h3>🏥 Republican Specialized Scientific-Practical Medical Center of Pediatrics</h3>
+                    <p><strong>Manzil:</strong> Tashkent, Shaikhzoda ko'chasi</p>
+                    <p><strong>Tel:</strong> +998-71-227-75-00</p>
+                    <p><strong>Xizmatlar:</strong> Pediatr kardiologiya, EXO-KG, EKG</p>
+                </div>
+
+                <div class="clinic-card">
+                    <h3>🏥 Republican Specialized Scientific-Practical Medical Center of Cardiology</h3>
+                    <p><strong>Manzil:</strong> Tashkent, Navoi</p>
+                    <p><strong>Tel:</strong> +998-71-233-80-80</p>
+                    <p><strong>Xizmatlar:</strong> Kardiologiya, Pediatr kardiologiya, operatsiya</p>
+                </div>
+
+                <div class="clinic-card">
+                    <h3>🏥 Tashkent Medical Academy Hospital</h3>
+                    <p><strong>Manzil:</strong> Tashkent, Farobiy</p>
+                    <p><strong>Tel:</strong> +998-71-227-96-00</p>
+                    <p><strong>Xizmatlar:</strong> Pediatrik yurak nuqsonlari diagnostikasi</p>
+                </div>
+
+                <div class="clinic-card">
+                    <h3>🏥 Childrens' National Medical Center</h3>
+                    <p><strong>Manzil:</strong> Tashkent, Shayxzoda</p>
+                    <p><strong>Tel:</strong> +998-71-227-77-77</p>
+                    <p><strong>Xizmatlar:</strong> Pediatr kardiologiya, jarrohlik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Tez-Tez So'raladigan Savollar (FAQ)</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Tug'ma yurak nuqsoni nima?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tug'ma yurak nuqsoni - bu fetal hayotda yurakda rivojlanish davomida yuzaga keladigan biyolojik anomaliyalardir. Ular deliklar, to'rayishlar yoki qismlari o'rinlarini almashtirishi mumkin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Tug'ma yurak nuqsonining sabablari nima?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sabablari ko'p: genetik faktorlar, oilada yurak nuqsoni tarix, homiladorlik davridagi infeksiyalar (rubella, CMV), muayyan dorilar qabuli, diabetni yaflangan ona, spirt va sigaret iste'moli.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Tug'ma yurak nuqsonini qachon topish mumkin?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Homiladorlik davomida (antenatal skrining), tug'ilish paytida, yoki keyinchalik alomatlar asosida. Ayniqsa yangi tug'ilganlarni darhol tekshirib chiqiladi. Qadimgi haloq asymptomatic bo'lishi va keyinroq topilishi mumkin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Barcha tug'ma yurak nuqsonlari operatsiya kerakmikans?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yo'q. Ba'zilari (kichik PFO, kichik VSD) o'z-o'zini yopilishi yoki kuzatuv bilan yetarli bo'ladi. Biroq ko'plari (VSD, ASD, TOF, TGA) muolaja kerak bo'ladi, bu dori bilan yoki operative usul bilan.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Tug'ma yurak nuqsoniga sog' kunlik xayot qanday ta'sir qiladi?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sog' ovqatlanish, jismoniy harakat, stress boshqarish, kontrol qilish muajassam bobning yurak sog'lig'iga ijobiy ta'sir qiladi. Shifokorning maslahatiga amal qilish muhim.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Bolaga tug'ma yurak nuqsoni bo'lsa, u xolatisiz o'sib-o'smidy?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nuqsonning turi va shiddatliligi shu qadar mahalliy. Ba'zilari yo'q degan shu qadar, ba'zilari muolaja kerak bo'ladi. Shifokorning ta'limot oling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="resources-section">
+        <div class="container">
+            <h2>Foydalanuvchi Uchun Resurslar</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>📄 PDF Qo'llanmalar</h3>
+                    <p>Bolalarda tug'ma yurak nuqsonlari haqida to'liq qo'llanma</p>
+                    <button class="btn btn-secondary">Yuklash</button>
+                </div>
+                <div class="resource-card">
+                    <h3>📚 Amaliy Maslahatlar</h3>
+                    <p>Ota-onalar uchun kundalik amaliy maslahatlar</p>
+                    <button class="btn btn-secondary">O'qish</button>
+                </div>
+                <div class="resource-card">
+                    <h3>🔗 Manbalar</h3>
+                    <p>Xalqaro tibbiy tashkilotlarning ma'lumotlari</p>
+                    <button class="btn btn-secondary">Ko'rish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CardioKids</h4>
+                    <p>Bolalarda tug'ma yurak nuqsonlarini erta aniqlash va ta'lim platformasi</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Havola</h4>
+                    <ul>
+                        <li><a href="#alomatlar">Alomatlar</a></li>
+                        <li><a href="#nuqsonlar">Nuqsonlar</a></li>
+                        <li><a href="#shoshilinch">Shoshilinch</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Aloqa</h4>
+                    <p>Email: info@cardiokids.uz</p>
+                    <p>Tel: +998-71-XXX-XX-XX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><strong>⚖️ Disclaimer:</strong> Bu sayt tibbiy tashxis qo'ymaydi. Saytda berilgan ma'lumot faqat ta'lim va og'ohlantiruv uchun. Alomat sezsangiz, albatta rasm shifokor yoki pediatr kardiologga murojaat qiling.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
